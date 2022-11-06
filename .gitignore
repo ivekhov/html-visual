@@ -1,0 +1,4 @@
+assets/
+fonts/
+*.txt
+.DS_Store
