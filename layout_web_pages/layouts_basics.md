@@ -746,11 +746,69 @@ article p::first-letter {
 
 ```
 
+## CSS Variables
+
+Допускается использование и объявление переменных в коде стилей для 
+переиспользования по коду в файле.
+
+```css
+:root {
+  --main-background: #ccc;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 50px;
+
+  font: 18px/1.5, sans-serif;
+
+  background-color: var(--main-background);
+}
+```
+
+Области видимости переменных:
+В этом примере переменная --padding доступна только для блока с классом main-section и всех его потомков
+
+```css
+.main-section {
+  --padding: 20px 30px;
+
+  padding: var(--padding);
+}
+```
+
+При использовании функции var() можно указать не только имя переменной, но и значение по умолчанию, если вдруг в переменной ничего нет. Ситуация не настолько частая, но знать про такую особенность важно.
+
+```css
+.section {
+background: var(--bg, #fff);
+}
+```
+Если переменной --bg нет, то, в качестве значения будет использовано значение #fff
 
 
+## Фон
 
+Свойство background является обобщенным для 8 свойств:
 
+- background-attachment
+- background-clip
+- background-color
+- background-image
+- background-origin
+- background-position
+- background-repeat
+- background-size
 
+обобщенные свойства сбрасывают все предыдущие связанные свойства. Это важно, так как у вас уже могут быть установлены фоновые изображения, их позиционирование и размеры. Если добавить цвет с помощью свойства background в таком блоке, то прошлые свойства будут сброшены до значений по умолчанию.
+
+Подробное описание см тут
+https://ru.hexlet.io/courses/css-content/lessons/background/theory_unit 
+
+## Градиенты
+
+https://ru.hexlet.io/courses/css-content/lessons/gradient/theory_unit
 
 
 

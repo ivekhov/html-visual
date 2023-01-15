@@ -1,0 +1,43 @@
+:root {
+    --transparent: transparent;
+    --purple: #9c27b0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+
+    /* BEGIN (write your solution here) */
+    background-image: repeating-linear-gradient(
+        45deg,
+        var(--transparent) 0px,
+        var(--transparent) 100px,
+        var(--purple) 100px,
+        var(--purple) 200px
+    ), repeating-linear-gradient(
+        -45deg,
+        var(--purple) 0px,
+        var(--purple) 100px,
+        var(--transparent) 100px,
+        var(--transparent) 200px
+    );
+}
+
+    /*background-image: repeating-linear-gradient(*/
+    /*        -45deg,*/
+    /*        var(--transparent), var(--transparent) 100px,*/
+    /*        var(--purple) 100px, var(--purple) 200px*/
+    /*);*/
+
+    /* END */
+
+
+
+
+/* Направление: 45 градусов*/
+/* Прозрачный цвет занимает первые 100 пикселей*/
+/* Фиолетовый цвет занимает следующие 100 пикселей*/
