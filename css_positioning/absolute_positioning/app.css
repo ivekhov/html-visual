@@ -1,0 +1,77 @@
+:root {
+    --red: #f44336;
+    --green: #4caf50;
+    --blue: #2196f3;
+    --side: 200px;
+}
+
+body {
+    width: 600px;
+    height: 400px;
+    margin: 0;
+}
+
+/* BEGIN (write your solution here) */
+
+.square-red {
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    width: var(--side);
+    height: var(--side);
+
+    background-color: var(--red);
+}
+
+.square-blue {
+    top: 0;
+    left: calc(var(--side) * 2);
+    position: absolute;
+    width: var(--side);
+    height: var(--side);
+    background-color: var(--blue);
+}
+
+.square-green {
+    top: calc(var(--side) * 1);
+    left: calc(var(--side) * 1);
+    position: absolute;
+
+    width: var(--side);
+    height: var(--side);
+
+    background-color: var(--green);
+
+}
+
+/*
+[class^="square"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: var(--side);
+  height: var(--side);
+}
+
+.square-red {
+  background: var(--red);
+}
+
+.square-green {
+  top: var(--side);
+  left: var(--side);
+
+  background: var(--green);
+}
+
+.square-blue {
+  left: calc(var(--side) * 2);
+
+  background: var(--blue);
+}
+
+
+
+ */
